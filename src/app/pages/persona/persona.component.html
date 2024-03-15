@@ -1,0 +1,88 @@
+<h4>Registro Persona </h4>
+<hr>
+<form autocomplete="off"[formGroup]="forma" (ngSubmit)="guardar()">
+
+  <div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Tipo documento</label>
+        <div class="col-8">
+    
+          <input class="form-control"
+                 type="text"
+                 placeholder="Tipo documento"
+                 formControlName="tipo_documento">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Documento</label>
+        <div class="col-8">
+    
+          <input class="form-control"
+                 type="text"
+                 placeholder="Documento"
+                 formControlName="documento">
+        </div>
+      </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Nombre"
+               formControlName="nombre">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Telefono</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Telefono"
+               formControlName="telefono">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-8">
+
+      <input class="form-control"
+             type="email"
+             placeholder="Correo electrónico"
+             formControlName="email">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Dirección</label>
+    <div class="col-8">
+
+      <input class="form-control"
+             type="text"
+             placeholder="Dirección"
+             formControlName="direccion">
+    </div>
+  </div>
+
+
+
+
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form>
