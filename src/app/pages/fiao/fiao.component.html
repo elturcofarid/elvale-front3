@@ -1,0 +1,54 @@
+<h4>Registro Cuenta </h4>
+<hr>
+<form autocomplete="off"[formGroup]="forma" (ngSubmit)="guardar(forma)">
+
+  <div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Cuenta</label>
+        <div class="col-8">
+  
+          <input class="form-control"
+                 type="text"
+                 placeholder="Cliente"
+                 formControlName="cliente"
+                 >
+                 <!--
+                 <small *ngIf="clienteValido" class="text-danger">
+                  El cliente es obligatorio.
+                 </small>
+                -->
+        </div>
+      </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Valor</label>
+        <div class="col-8">
+    
+          <input class="form-control"
+                 type="text"
+                 placeholder="valor"
+                 formControlName="valor"
+                 >
+                 <small *ngIf="valorValido" class="text-danger">
+                  El valor es obligatorio.
+                 </small>
+        </div>
+      </div>
+
+   
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<br>

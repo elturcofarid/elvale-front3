@@ -1,6 +1,6 @@
 <h4>Registro Establecimiento </h4>
 <hr>
-<form autocomplete="off"[formGroup]="forma" (ngSubmit)="guardar()">
+<form autocomplete="off"[formGroup]="forma" (ngSubmit)="guardar(forma)">
 
   <div>
 
@@ -11,7 +11,11 @@
           <input class="form-control"
                  type="text"
                  placeholder="Nit"
-                 formControlName="nit">
+                 formControlName="nit"
+                 >
+                 <small *ngIf="nitValido" class="text-danger">
+                  El NIT es obligatorio.
+                 </small>
         </div>
       </div>
 
@@ -22,7 +26,11 @@
         <input class="form-control"
                type="text"
                placeholder="Nombre"
-               formControlName="nombre">
+               formControlName="nombre"
+               >
+               <small *ngIf="nombreValido" class="text-danger">
+                El nombre es obligatorio.
+               </small>
       </div>
     </div>
 
@@ -33,7 +41,11 @@
         <input class="form-control"
                type="text"
                placeholder="Telefono"
-               formControlName="telefono">
+               formControlName="telefono"
+               >
+               <small *ngIf="telefonoValido" class="text-danger">
+                El telefono es obligatorio.
+               </small>
       </div>
     </div>
 
@@ -46,7 +58,11 @@
       <input class="form-control"
              type="text"
              placeholder="Dirección"
-             formControlName="direccion">
+             formControlName="direccion"
+             >
+               <small *ngIf="direccionValido" class="text-danger">
+                La direccion es obligatoria.
+               </small>
     </div>
   </div>
 
@@ -59,6 +75,7 @@
              type="text"
              placeholder="propietario"
              >
+               
     </div>
   </div>
 
@@ -76,3 +93,5 @@
   </div>
 
 </form>
+
+<br>

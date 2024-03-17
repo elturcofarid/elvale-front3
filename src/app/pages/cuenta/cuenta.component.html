@@ -1,0 +1,69 @@
+<h4>Registro Cuenta </h4>
+<hr>
+<form autocomplete="off"[formGroup]="forma" (ngSubmit)="guardar(forma)">
+
+  <div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Cliente</label>
+        <div class="col-8">
+  
+          <input class="form-control"
+                 type="text"
+                 placeholder="Cliente"
+                 formControlName="cliente"
+                 >
+                 <!--
+                 <small *ngIf="clienteValido" class="text-danger">
+                  El cliente es obligatorio.
+                 </small>
+                -->
+        </div>
+      </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Alias</label>
+        <div class="col-8">
+    
+          <input class="form-control"
+                 type="text"
+                 placeholder="Alias"
+                 formControlName="alias"
+                 >
+                 <small *ngIf="aliasValido" class="text-danger">
+                  El alias es obligatorio.
+                 </small>
+        </div>
+      </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Crédito aprobado</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Crédiro aprobado"
+               formControlName="aprobado"
+               >
+               <small *ngIf="aprobadoValido" class="text-danger">
+                El valor aprobado es obligatorio.
+               </small>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<br>
