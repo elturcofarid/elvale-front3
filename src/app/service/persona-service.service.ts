@@ -18,6 +18,10 @@ export class PersonaServiceService {
     return this.http.get(`${ this.url }`);
   }
 
+  getPersonaDocumento(form : PersonaModel){
+    return this.http.post(`${ this.url }/documento`, form);
+  }
+
   postPersona (form : PersonaModel){
     return this.http.post(`${ this.url }/registrar`, form);
   }
