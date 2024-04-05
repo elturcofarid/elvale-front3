@@ -9,11 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CuentaComponent } from './pages/cuenta/cuenta.component';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { FiaoComponent } from './pages/fiao/fiao.component';
-import { BuscadorComponent } from './pages/persona/buscador/buscador.component';
-import { PersonaModalComponent } from './pages/persona/persona-modal/persona-modal.component';
-import { PanelPrincipalComponent } from './pages/negocio/panel-principal/panel-principal.component';
-import { MaterialModule } from './module/material/material.module';
-import { NegocioComponent } from './pages/negocio/negocio.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,10 +17,7 @@ import { NegocioComponent } from './pages/negocio/negocio.component';
     CuentaComponent,
     ClienteComponent,
     FiaoComponent,
-    BuscadorComponent,
-    PersonaModalComponent,
-    PanelPrincipalComponent,
-    NegocioComponent
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +25,6 @@ import { NegocioComponent } from './pages/negocio/negocio.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
