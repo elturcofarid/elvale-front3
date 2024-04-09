@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CuentaComponent } from './pages/cuenta/cuenta.component';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { FiaoComponent } from './pages/fiao/fiao.component';
+import { CartaComponent } from './pages/comumnes/carta/carta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,7 @@ import { FiaoComponent } from './pages/fiao/fiao.component';
     CuentaComponent,
     ClienteComponent,
     FiaoComponent,
-
+    CartaComponent,
   ],
   imports: [
     BrowserModule,
