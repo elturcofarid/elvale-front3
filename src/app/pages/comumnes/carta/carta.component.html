@@ -1,0 +1,38 @@
+<div class="card" style="width: 18rem;">
+    <div class="col" *ngIf="!persona">
+      <form (ngSubmit)="consultPerson()">
+        <div class="form-group">
+          <label for="searchTerm">Buscar por:</label>
+          <select class="form-control" id="searchTerm" [(ngModel)]="selectedSearchTerm"
+            [ngModelOptions]="{ standalone: true }">
+            <option value="name">Nombre</option>
+            <option value="age">Edad</option>
+            <option value="gender">Género</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="searchValue" placeholder="Introduce el valor de búsqueda"
+            [(ngModel)]="searchValue" name="searchValue">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+    </div>
+
+
+  <div *ngIf="persona" class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre : {{persona.nombre}}</li>
+      <li class="list-group-item">Telefono: {{modalService.persona.telefono}}</li>
+      <li class="list-group-item">Email: {{modalService.persona.email}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" onclick="limpiar()"  class="card-link">Limpiar</a>
+    </div>
+  </div>
+</div>
